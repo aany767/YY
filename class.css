@@ -21,6 +21,10 @@ body{
 
 /* /////////////////////////// */
 
+.sec {
+    display: flex;
+    justify-content: space-around;
+}
 .container{
     position:relative;
     width:1000px;
