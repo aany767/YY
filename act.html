@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I2TRC2 | KGHS</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="stylesheet" href="act.css">
+    <link rel="shortcut icon" href="img/old_logo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="pixelCon"></div>
+
+    <section class="sec">
+        <header>
+            <a href="#" class="logo">I2TRC2</a>
+            <div class="toggleMenu" onclick="menuToggle();"></div>
+            <ul class="navigation">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="member.html">MEMBER</a></li>
+                <li><a href="act.html">ACTIVITY</a></li>
+                <li><a href="class.html">CLASS</a></li>
+            </ul>
+        </header>
+    
+
+
+    <div class="container">
+        <div class="slider">
+            <div class="slides" style="--img: url('img/1.jpg')">
+                <div class="cont">
+                    <h3>茶會</h3>
+                    <p>29&30th | 幹部交接</p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('img/2.jpg')">
+                <div class="cont">
+                    <h3>迎新</h3>
+                    <p>ALT+F4五校聯合迎新</p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('img/3.jpg')">
+                <div class="cont">
+                    <h3>企業參訪</h3>
+                    <p>奧義智慧科技CyCraft</p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('img/4.jpg')">
+                <div class="cont">
+                    <h3>企業參訪</h3>
+                    <p>精誠集團SYSTEX</p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('img/5.jpg')">
+                <div class="cont">
+                    <h3>大學參觀</h3>
+                    <p>台大電機系講座</p>
+                </div>
+            </div>
+            <div class="slides" style="--img: url('img/6.jpg')">
+                <div class="cont">
+                    <h3>社遊</h3>
+                    <p>1/21~1/23 六校聯合社遊</p>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <span class='prev'></span>
+            <span class="next"></span>
+        </section>
+    </div>
+
+
+
+<script>
+        let next = document.querySelector('.next');
+        let prev = document.querySelector('.prev');
+        let slider = document.querySelector('.slider');
+
+        next.addEventListener('click', function(){
+            let slides = document.querySelectorAll('.slides');
+            slider.appendChild(slides[0]);
+        })
+        prev.addEventListener('click', function(){
+            let slides = document.querySelectorAll('.slides');
+            slider.prepend(slides[slides.length - 1]);
+        })
+
+</script>
+
+
+    <script type="text/javascript">
+
+        
+        function menuToggle(){
+            const toggleMenu = document.querySelector('.toggleMenu');
+            const navigation = document.querySelector('.navigation');
+            toggleMenu.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+        
+        function createPixels() {
+            let container = document.querySelector(".pixelCon");
+            let totalPixels = Math.floor(window.innerWidth / 20) * Math.floor(window.innerHeight / 20);
+
+            container.innerHTML = ""; // 清空舊內容
+            for (let i = 0; i < totalPixels; i++) {
+                let pixel = document.createElement("div");
+                pixel.classList.add("pixel");
+                pixel.style.animationDelay = Math.random() * 3 + "s"; // 隨機動畫延遲
+                container.appendChild(pixel);
+            }
+        }
+        createPixels();
+        window.addEventListener("resize", createPixels); // 當視窗變更時重新計算
+    
+    
+    
+    </script>
+
+
+
+
+</body>
+</html>
