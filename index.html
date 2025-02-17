@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I2TRC2 | KGHS</title>
+    <link rel="stylesheet" href="style.css"> 
+    <link rel="shortcut icon" href="img/old_logo.png" type="image/x-icon">
+</head>
+<body>
+    <div class="pixelCon"></div>
+
+    <section>
+        <header>
+            <a href="#" class="logo">KGHS</a>
+
+            <div class="toggleMenu" onclick="menuToggle();"></div>
+            <ul class="navigation">
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="member.html">MEMBER</a></li>
+                <li><a href="act.html">ACTIVITY</a></li>
+                <li><a href="class.html">CLASS</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBx">
+                <h2>I2TRC2<br><span>高雄女中資訊研究社 30th</span></h2>
+                <p>
+                    
+                    我們是一個高雄女中內的學術性社團，
+                    在社課會教一些關於資訊領域的課程，會有學姐帶你從零開始學，也會有進階班，
+                    歡迎學弟加入資訊社的大家庭！ 除了教學課程，
+                    我們也與其他學校一同合辦許多活動與聯課，提供學妹們與友校交流的機會。 
+                </p>
+                <a href="https://linktr.ee/kghsi2trc2?utm_source=linktree_profile_share&ltsid=fa7eebd6-1ddd-4131-8a16-0248a538cd7f" target="_blank">link tree</a>
+            </div>
+            <!-- <img src="img/i2trc2.png" alt="I2TRC2" class="imgi2trc2"> -->
+        </div>
+        
+        
+
+        <img src="img/i2trc2.png" alt="I2TRC2" class="imgi2trc2">
+        
+    </section>
+
+    <script type="text/javascript">
+        function menuToggle(){
+            const toggleMenu = document.querySelector('.toggleMenu');
+            const navigation = document.querySelector('.navigation');
+            toggleMenu.classList.toggle('active');
+            navigation.classList.toggle('active');
+        }
+        
+        function createPixels() {
+            let container = document.querySelector(".pixelCon");
+            let totalPixels = Math.floor(window.innerWidth / 20) * Math.floor(window.innerHeight / 20);
+
+            container.innerHTML = ""; // 清空舊內容
+            for (let i = 0; i < totalPixels; i++) {
+                let pixel = document.createElement("div");
+                pixel.classList.add("pixel");
+                pixel.style.animationDelay = Math.random() * 3 + "s"; // 隨機動畫延遲
+                container.appendChild(pixel);
+            }
+        }
+
+        createPixels();
+        window.addEventListener("resize", createPixels); // 當視窗變更時重新計算
+    </script>
+
+
+
+
+</body>
+</html>
