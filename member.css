@@ -67,14 +67,14 @@ section{
     opacity: 0.5;
     transition: 0.5s;
 }
-
+.container .card:active .inncont{
+    opacity: 1;
+}
 .container .card:hover .inncont{
     opacity: 1;
 }
 
-.container .card:active .inncont{
-    opacity: 1;
-}
+
 .container .card .inncont .inncontBx h3{
     color:#fff;
     text-transform: uppercase;
@@ -109,18 +109,16 @@ section{
     opacity: 0;
     transition-delay: calc(0.1s*var(--i));
 }
-
-.container .card:hover .sci li{
-    transform: translateY(-20px);
-    opacity: 1;
-
-}
-
 .container .card:active .sci li{
     transform: translateY(-20px);
     opacity: 1;
 
 }
+.container .card:hover .sci li{
+    transform: translateY(-20px);
+    opacity: 1;
+}
+
 .container .card .sci li a {
     color:#fff;
     font-size: 20px;
