@@ -329,3 +329,16 @@ header .navigation li a{
     } 
 
 }
+
+
+@media (max-width: 430px) {
+    .imgi2trc2 {
+        position: absolute;
+        top: 570px;
+        height: initial;
+        left: 60px;
+        right: 20px;
+        width: 70%;
+        margin-top: 20px;
+    }
+}
