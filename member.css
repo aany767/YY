@@ -67,14 +67,14 @@ section{
     opacity: 0.5;
     transition: 0.5s;
 }
-.container .card:active .inncont{
-    opacity: 1;
-}
+
 .container .card:hover .inncont{
     opacity: 1;
 }
 
-
+.container .card:active .inncont{
+    opacity: 1;
+}
 .container .card .inncont .inncontBx h3{
     color:#fff;
     text-transform: uppercase;
@@ -109,11 +109,7 @@ section{
     opacity: 0;
     transition-delay: calc(0.1s*var(--i));
 }
-.container .card:active .sci li{
-    transform: translateY(-20px);
-    opacity: 1;
 
-}
 .container .card:hover .sci li{
     transform: translateY(-20px);
     opacity: 1;
@@ -123,4 +119,36 @@ section{
     color:#fff;
     font-size: 20px;
     transition: 0.5s;
+}
+
+
+@media (hover: none) {
+    .container .card .inncont{
+        opacity: 1;
+    }
+    .container .card .sci li {
+        color: #fff;
+        font-size: 20px;
+        opacity: 0; 
+        transform: translateY(40px);
+        transition: 0.5s;
+        animation: fadeInOut 2s infinite alternate;
+        transition-delay: calc(0.5s * var(--i));
+
+    }
+    .container .card .sci li a{
+        transition-delay: calc(0.5s * var(--i));
+
+    }
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(-20px);
+    }
 }
