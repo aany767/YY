@@ -18,13 +18,19 @@ body{
     background:#1674ab;
 }
 
+.sec{
+    position: relative;
+    width:100%;
+    min-height:100vh;
+    display: flex;
+    justify-content:space-around;
+    align-items:center;
+    padding:100px;
+}
+
 
 /* /////////////////////////// */
 
-.sec {
-    display: flex;
-    justify-content: space-around;
-}
 .container{
     position:relative;
     width:1000px;
@@ -81,6 +87,7 @@ body{
 }
 .container .card .cont{
     position: absolute;
+    font-family: 'Poppins', sans-serif;
     right: 0;
     width:calc(100% - 75px);
     height:100%;
@@ -90,7 +97,15 @@ body{
     align-items: center;
 }
 .container .card .cont h3{
-    color:#ff0057;
+    color:#5139aa;
+    font-weight: 1000;
+    margin-bottom: 5px;
+    font-size: 2em;
+}
+.container .card .cont p{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color:#000000;
     margin-bottom: 5px;
     font-size: 24px;
 }
