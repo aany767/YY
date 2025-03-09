@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    
 }
 
 html, body {
@@ -65,9 +66,10 @@ header{
 }
 
 header .logo{
-    font-size: 2em;
+    font-size: 3em;
+    font-family:  "Silkscreen", "VT323", sans-serif;
     color:#fff;
-    font-weight: 700;
+    font-weight: 600;
     text-transform:uppercase;
     text-decoration: none;
 }
@@ -110,6 +112,7 @@ header .navigation li a{
 }
 
 .content p{
+    font-family:  "VT323", sans-serif;
     color:#fff;
     font-size: 1.2em;   
     font-weight: 600;
@@ -214,19 +217,21 @@ header .navigation li a{
         background-position: center;
     }
 
-    .sec{
+    section{
         justify-content: center;
         padding:40px 40px 0;
+        min-height: 150vh;
         position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .content {
         position: absolute;
-        min-height: 200vh;
         top: 0;
         left: 40px;
         right: 40px;
-        
     }
 
     .content h2{
@@ -235,18 +240,16 @@ header .navigation li a{
     }
     
 
-    .imgi2trc2{
+    .imgi2trc2 {
         position: absolute;
-        top:470px;
-        height:initial;
-        left: 90px;
-        right: 20px;
-        width:70%;
-        margin-top:20px;
-    } 
+        top: 660px;
+        height: initial;
+        width: 70%;
+        left: 60px;
+    }
 
 }
-
+/* 
 
 @media (max-width: 501px){
     header{ 
@@ -329,16 +332,4 @@ header .navigation li a{
     } 
 
 }
-
-
-@media (max-width: 430px) {
-    .imgi2trc2 {
-        position: absolute;
-        top: 570px;
-        height: initial;
-        left: 60px;
-        right: 20px;
-        width: 70%;
-        margin-top: 20px;
-    }
-}
+ */
